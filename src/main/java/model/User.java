@@ -11,9 +11,20 @@ public class User {
 	private Date startDate;
 	private Date endDate;
 	
-	public User(int id, String fullname, String username, String password, String email) {
+	public User() {
 		// TODO Auto-generated constructor stub
 	}
+
+	
+	public User(int id, String fullname, String email, Date startDate, Date endDate) {
+		super();
+		this.id = id;
+		this.fullname = fullname;
+		this.email = email;
+		this.startDate = startDate;
+		this.endDate = endDate;
+	}
+
 
 	public User(int id, String fullname, String username, String password, String email, Date startDate, Date endDate) {
 		super();

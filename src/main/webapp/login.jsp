@@ -53,7 +53,7 @@ form input[type="submit"] {
 	}
 </script>
 <body>
-	<form id="loginForm" action="LoginServlet" method="get">
+	<form id="loginForm" action="LoginServlet" method="post">
 		<c:forEach var="mess" items="${errorMessages}">
 	    ${mess} 
 		</c:forEach>
@@ -65,8 +65,5 @@ form input[type="submit"] {
 			placeholder="Enter your password" value="${param.password}">
 		<input type="button" onclick="submitLogin()" value="Login">
 	</form>
-	<%-- <c:if test="${not empty errorMessage}">
-  		<p>${errorMessage}</p>
-  </c:if> --%>
 </body>
 </html>

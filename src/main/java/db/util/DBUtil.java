@@ -1,9 +1,10 @@
 package db.util;
 
+import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-public class DBUtil {
+public class DBUtil implements Serializable{
 	public static Connection makeConnection() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");

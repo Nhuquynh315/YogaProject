@@ -8,7 +8,7 @@
 Fitness Template
 http://www.templatemo.com/tm-487-fitness
 -->
-<title>Fitness - Responsive HTML Template</title>
+<title>Yoga With Becky</title>
 <meta name="description" content="">
 <meta name="author" content="">
 <meta charset="UTF-8">
@@ -60,9 +60,9 @@ http://www.templatemo.com/tm-487-fitness
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav navbar-right main-navigation">
 				<li><a href="home.jsp" class="smoothScroll">Home</a></li>
-				<li><a href="#overview" class="smoothScroll">Classes</a></li>
+				<li><a href="ClazzServlet" class="smoothScroll">Classes</a></li>
 				<li><a href="#trainer" class="smoothScroll">Who is Becky</a></li>
-				<li><a href="#blog" class="smoothScroll">Blog</a></li>
+				<li><a href="blog.jsp" class="smoothScroll">Blog</a></li>
 				<li><a href="login.jsp" class="smoothScroll">Log in</a></li>
 				<li><a href="register.jsp" class="smoothScroll">Register</a></li>
 			</ul>
@@ -274,62 +274,36 @@ http://www.templatemo.com/tm-487-fitness
 <!-- =========================
     OUR PRICE SECTION   
 ============================== -->
-<section id="our price" class="parallax-section">
-	<div class="container">
-		<div class="row">
+<section id="our_price" class="parallax-section">
+    <div class="container">
+        <div class="row">
 
-			<div class="wow fadeInUp col-md-12 col-sm-12" data-wow-delay="0.9s">
-				<h2>Ready to get started?</h2>
-				<p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo.</p>
-			</div>
+            <div class="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="1s">
+                <h3 class="pricing__title">Monthly</h3>
+                <div class="pricing__price"><span class="pricing__currency">$</span>27.99</div>
+                <ul class="pricing__feature-list">
+                    <li class="pricing__feature">Try free for 7 days</li>
+                    <li class="pricing__feature">3000+ on demand yoga practices</li>
+                    <li class="pricing__feature">2700+ articles and resources</li>
+                    <li class="pricing__feature">300+ courses and challenges</li>
+                </ul>
+                <button class="pricing__action">Sign Up Now</button>
+            </div>
 
-			<div class="wow fadeInUp col-md-4 col-sm-6" data-wow-delay="1s">
-				<div class="pricing__item">
-                    <h3 class="pricing__title">Monthly</h3>
-                    <div class="pricing__price"><span class="pricing__currency">$</span>27,99</div>
-                    <ul class="pricing__feature-list">
-                        <li class="pricing__feature">Try free for 7 days</li>
-                        <li class="pricing__feature">3000+ on demand yoga practices</li>
-                        
-                        <li class="pricing__feature">2700+ articles and resources</li>
-                        <li class="pricing__feature">300+ courses and challenges</li>
-                    </ul>
-                    <button class="pricing__action">Sign Up Now</button>
-                </div>
-			</div>
+            <div class="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="1.3s">
+                <h3 class="pricing__title">Yearly</h3>
+                <div class="pricing__price"><span class="pricing__currency">$</span>275</div>
+                <ul class="pricing__feature-list">
+                    <li class="pricing__feature">Try free for 7 days</li>
+                    <li class="pricing__feature">Save $60.88 annually</li>
+                    <li class="pricing__feature">Free digital practice journal</li>
+                    <li class="pricing__feature">Unlimited access to all classes</li>
+                </ul>
+                <button class="pricing__action">Sign Up Now</button>
+            </div>
 
-			<div class="wow fadeInUp col-md-4 col-sm-6" data-wow-delay="1.3s">
-				<div class="pricing__item">
-                    <h3 class="pricing__title">Yearly</h3>
-                    <div class="pricing__price"><span class="pricing__currency">$</span>275</div>                  
-                    <ul class="pricing__feature-list">
-                        <li class="pricing__feature">Try free for 7 days</li>
-                        <li class="pricing__feature">Save $60.88 annually</li>
-                        <li class="pricing__feature">Free digital practice journal</li>
-                        <li class="pricing__feature">Unlimited access to all classes</li>
-  
-                    </ul>
-                    <button class="pricing__action">Sign Up Now</button>
-                </div>
-			</div>
-
-			<div class="wow fadeInUp col-md-4 col-sm-6" data-wow-delay="1.6s">
-				<div class="pricing__item">
-                    <h3 class="pricing__title">Premium Training</h3>
-                    
-                    <ul class="pricing__feature-list">
-                        <li class="pricing__feature">Access to classes you want to improve</li>
-                        <li class="pricing__feature">Inspire your growth</li>
-                        <li class="pricing__feature">Expand your knowledge</li>
-                        <li class="pricing__feature">Develop your journey</li>
-                        <li class="pricing__feature">Teacher certificate</li>
-                    </ul>
-                   <button class="pricing__action">Click to choose classes</button>
-                </div>
-			</div>
-
-		</div>
-	</div>
+        </div>
+    </div>
 </section>
 
 

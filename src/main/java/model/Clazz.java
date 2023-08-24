@@ -2,28 +2,24 @@ package model;
 
 public class Clazz {
 	private int id;
-	private int categoryId;
+	private int category_id;
+	private String name;
 	private int level;
 	private int lengthMin;
-	private String title;
 	private String description;
 	
 	public Clazz() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Clazz(int id, int categoryId, int level, int lengthMin, String title, String description) {
+	public Clazz(int id, int category_id, String name, int level, int lengthMin, String description) {
 		super();
 		this.id = id;
-		this.categoryId = categoryId;
+		this.category_id = category_id;
+		this.name = name;
 		this.level = level;
 		this.lengthMin = lengthMin;
-		this.title = title;
 		this.description = description;
-	}
-
-	public Clazz(int id, int categoryId, String name) {
-		// TODO Auto-generated constructor stub
 	}
 
 	public int getId() {
@@ -34,12 +30,20 @@ public class Clazz {
 		this.id = id;
 	}
 
-	public int getCategoryId() {
-		return categoryId;
+	public int getCategory_id() {
+		return category_id;
 	}
 
-	public void setCategoryId(int categoryId) {
-		this.categoryId = categoryId;
+	public void setCategory_id(int category_id) {
+		this.category_id = category_id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public int getLevel() {
@@ -56,14 +60,6 @@ public class Clazz {
 
 	public void setLengthMin(int lengthMin) {
 		this.lengthMin = lengthMin;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
 	}
 
 	public String getDescription() {

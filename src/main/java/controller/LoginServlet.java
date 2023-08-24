@@ -35,28 +35,11 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		UserDAO userDAO = new UserDAO();
-		String username = request.getParameter("username");
-		String password = request.getParameter("password");
 
-		try {
-			User user = userDAO.getUserByEmailAndPassword(username, password);
-			if (user != null) {
-				HttpSession session = request.getSession(false);
-				session.setAttribute("name", user.getUsername());
-				session.setAttribute("id", user.getId());
-				response.sendRedirect("home.jsp");
-			} else {
-				
-				request.setAttribute("errorMessages", "Wrong user or password, please try again");
-				RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
-				rd.forward(request, response);
+			// TODO Auto-generated method stub
+			doPost(request, response);
 		}
-		} catch (NumberFormatException | SQLException e) {
-			e.printStackTrace();
-
-		}
-	}
+	
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
@@ -64,8 +47,27 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+				UserDAO userDAO = new UserDAO();
+
+		try {
+			String username = request.getParameter("username");
+			String password = request.getParameter("password");
+			
+			User user = userDAO.getUserByUsernameAndPassword(username, password);
+			if (user == null) {
+				request.setAttribute("errorMessages", "Wrong user or password, please try again");
+				RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+				rd.forward(request, response);
+			}else {
+				HttpSession session = request.getSession();
+				session.setAttribute("username", user.getUsername());
+				session.setAttribute("id", user.getId());
+				session.setMaxInactiveInterval(60 * 60); // user sẽ bị log out ra nếu ko hoạt động trong 60
+				response.sendRedirect("home.jsp");
+			}
+			}catch (SQLException e) {
+			e.printStackTrace();
 	}
 
+}
 }
