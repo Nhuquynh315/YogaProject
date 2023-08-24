@@ -8,6 +8,7 @@ public class Clazz {
 	private int lengthMin;
 	private String description;
 	
+	
 	public Clazz() {
 		// TODO Auto-generated constructor stub
 	}
@@ -21,6 +22,7 @@ public class Clazz {
 		this.lengthMin = lengthMin;
 		this.description = description;
 	}
+
 
 	public int getId() {
 		return id;
@@ -69,6 +71,5 @@ public class Clazz {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	
 	
 }
